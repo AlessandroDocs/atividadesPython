@@ -16,4 +16,81 @@ print(obj1.get_info())
 obj1.set_color('vermelho')
 obj1.get_color()
 print(obj1.get_color())
-##################################3
+##################################
+class Square:
+    def __init__(self, side):
+        self.__side = side
+    @property
+    def side(self):
+        return self.__side
+    @side.setter
+    def side(self, newValue):
+        self.__side = newValue
+    def get_side_area(self):
+        return (self.__side*self.__side)
+
+obj1 = Square(5)
+print(obj1.side)
+
+obj1.side = 8
+print(obj1.side)
+
+print(obj1.get_side_area())
+
+#############################################
+class rectang: 
+    def __init__(self):
+        self.__pk = 0
+        self.__leng = 0
+    def get_sides(self):
+        return self.__pk, self.__leng
+    def set_sides(self, pk, leng):
+        self.__pk = pk
+        self.__leng = leng
+    def get_area(self):
+        return (self.__pk * self.__leng)
+
+obj1 = rectang()
+obj1.set_sides(5,7)
+
+print(obj1.get_sides())
+print(obj1.get_area())
+###########################################
+class rectang: 
+    def __init__(self, pk, leng):
+        self.__pk = pk
+        self.__leng = leng
+    def get_sides(self):
+        return self.__pk, self.__leng
+    def get_area(self, total):
+        result = total/(self.__pk * self.__leng)
+        return result
+
+obj1 = rectang(5,4)
+sideA = int(input('largura '))
+sideB = int(input('comprimento '))
+print(obj1.get_area(sideA * sideB))
+################################################
+class person:
+    def __init__(self, name, age, heig, weig):
+        self.__name = name
+        self.__age = age
+        self.__heig = heig
+        self.__weig = weig
+    def aginig(self):
+        self.__age = self.__age + 1
+        if self.__age < 21:
+            self.__heig =self.__heig + 0.05
+    def set_weig(self, newWeig):
+        self.__weig = newWeig
+    def set_heig(self, newHeig):
+        self.__heig = newHeig
+    def get_info(self):
+        return self.__name, self.__age, self.__heig, self.__weig
+obj1 = person('teste', 10, 1.50, 20)
+
+for x in range(6):
+    print(obj1.get_info())
+    obj1.aginig()
+
+#################################################
