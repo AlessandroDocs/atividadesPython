@@ -1,0 +1,19 @@
+class Ball: 
+    def __init__(self, color, circumf = 0.6, material='wood'):
+        self.__color= color
+        self.__circumf = circumf
+        self.__material = material
+    def set_color(self, newColor):
+        self.__color =  newColor
+    def get_color(self):
+        return self.__color
+    def get_info(self):
+        return self.__color, self.__circumf, self.__material
+
+obj1 = Ball('blue')
+obj1.get_info()
+print(obj1.get_info())
+obj1.set_color('vermelho')
+obj1.get_color()
+print(obj1.get_color())
+##################################3
